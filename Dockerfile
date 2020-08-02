@@ -7,7 +7,7 @@ RUN apt-get update \
     && pip install ipywidgets \
     && pip install bqplot \
     && pip install vaex \
-    && RUN pip install sklearn[complete] \
+    && pip install sklearn[complete] \
     && pip install jupyterthemes
 
 ##EJECUTO EL TEMA DE JUPYTER THEME
@@ -17,6 +17,6 @@ RUN jt -t monokai -f fira -fs 13 -nf ptsans -nfs 11 -N -kl -cursw 5 -cursc r -ce
 RUN cd /home
 
 # ULTIMO PASO: ENCIENDO JUPYTER 
-CMD ["/bin/bash"]
+CMD jupyter notebook --ip=0.0.0.0 --allow-root
 
 

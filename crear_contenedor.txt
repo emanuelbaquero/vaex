@@ -1,0 +1,1 @@
+docker run -it --name vaex -v C:/Users/Home/Desktop/docker:/home -p 8888:8888 emanuelbaq/vaex:latest
